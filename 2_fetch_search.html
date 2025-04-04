@@ -12,7 +12,9 @@
                 .then(response => {
                     if (!response.ok) throw new Error("데이터를 불러오는 데 실패했습니다.");
 
-                    const data = response.json();
+                    return response.json();
+                })
+                .then(data => {
                     if (data.length > 0) {
                         const table = document.createElement("table");
                         table.id = "dataTable"; // 검색 시 사용하기 위해 ID 추가
