@@ -19,12 +19,14 @@
 						for (let i in data) {
 							let $id = data[i].id;
 							let $name = data[i].name;
-							let $team = data[i].team;
+							let $gender = data[i].gender;
+							let $adddr = data[i].addr;
 
 							let row = $("<tr/>").append(
 								$("<td/>").text($id),
 								$("<td/>").text($name),
-								$("<td/>").text($team),
+								$("<td/>").text($gender),
+								$("<td/>").text($addr),
 							);
 
 							tb.append(row);
